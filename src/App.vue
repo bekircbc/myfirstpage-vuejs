@@ -5,7 +5,10 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <img alt="bc logo" src="./assets/icon.png" />
+  <div class="header">
+    <img alt="bc logo" src="./assets/icon.png" />
+    <h1>Vuejs</h1>
+  </div>
   <HelloWorld msg="My First Page with Vuejs" />
 </template>
 
@@ -18,8 +21,13 @@ import HelloWorld from "./components/HelloWorld.vue";
   color: #2c3e50;
   margin-top: 60px;
 }
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 img {
-  width: 20rem;
-  height: 20rem;
+  width: 10rem;
+  height: 10rem;
 }
 </style>
