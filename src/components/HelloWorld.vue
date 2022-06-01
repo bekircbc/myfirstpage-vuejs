@@ -18,8 +18,8 @@ const count = ref(0);
     <a href="" target="_blank">My Linkedin</a>
   </p>
   <div class="countUpDown">
-    <button type="button" @click="count--">Count Down</button>
     <button type="button" @click="count++">Count Up</button>
+    <button type="button" @click="count--">Count Down</button>
     <p>Count : {{ count }}</p>
   </div>
 </template>
