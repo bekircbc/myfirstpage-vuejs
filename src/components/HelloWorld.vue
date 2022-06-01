@@ -1,40 +1,44 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 defineProps({
-  msg: String
-})
+  msg: String,
+});
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
+    See my profile hier:
+    <a href="" target="_blank">My Profile</a>
     +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+    <a href="" target="_blank">My Linkedin</a>
   </p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Documentation
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <div class="countUpDown">
+    <button type="button" @click="count--">Count Down</button>
+    <button type="button" @click="count++">Count Up</button>
+    <p>Count : {{ count }}</p>
+  </div>
 </template>
 
 <style scoped>
 a {
+  background-color: #f5f5f5;
   color: #42b983;
+  text-decoration: none;
+}
+a:hover {
+  background-color: black;
+  color: white;
+}
+.countUpDown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 </style>
